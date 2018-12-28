@@ -5,7 +5,7 @@ MIDI messages are transmitted asynchronously, as groups of bytes. Each byte is p
 
 THe goal of this lab is to design a hardware version of a serial MIDI receiver. The design is implemented in Altera’s Complex Programmable Logic Device (CPLD) MAX 7000S, with part number EPM7064SLC44-10. Input to the Altera device is the single-bit input line from the MIDI interface cable through the opto-isolator circuit. The Altera chip will be clocked by a 4MHz crystal oscillator. Output pins of the device will drive seven LEDs to display the note number of the note played on computer keyboard in binary. 
 
-Timing diagram of a MIDI byte can be seen here https://imgur.com/NbamwNN
+For transmission at 31,250 bits/s, each bit persists on the line for 32 µs, called the bit time (BT). The addition of the start bit and stop bits means that each MIDI byte takes 10 bit periods to transmit.Timing diagram of a MIDI byte can be seen here https://imgur.com/NbamwNN
 
 
 Design for schematic can be seen here https://imgur.com/RbBXpfw
